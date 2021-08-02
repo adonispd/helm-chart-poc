@@ -43,7 +43,7 @@ jobs:
         uses: helm/chart-releaser-action@v1.2.1
         with:
           charts_dir: charts
-          charts_repo_url: https://the-watchmen.github.io/helm-charts
+          charts_repo_url: https://github.com/adonispd/helm-chart-poc
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
           CR_GIT_BASE_URL: https://api.github.com/
