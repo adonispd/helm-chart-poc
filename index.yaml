@@ -3,12 +3,12 @@ entries:
   myapp:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-08-02T20:14:37.296615513Z"
+    created: "2021-08-02T20:18:16.665746156Z"
     description: A Helm chart for Kubernetes
-    digest: 6e8b0eaa0f59b27bf380d5b3dda5176505ef2923d6d7d42490c2370618ed9367
+    digest: 0b619b760bc6a0aceb97c2aa9b36585b1d02e1b233059e617d6a6f43f144a116
     name: myapp
     type: application
     urls:
-    - https://github.com/adonispd/helm-chart-poc/releases/download/myapp-0.1.4/myapp-0.1.4.tgz
-    version: 0.1.4
-generated: "2021-08-02T20:14:37.296903727Z"
+    - https://github.com/adonispd/helm-chart-poc/releases/download/myapp-0.1.5/myapp-0.1.5.tgz
+    version: 0.1.5
+generated: "2021-08-02T20:18:16.665752456Z"
