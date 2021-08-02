@@ -46,7 +46,7 @@ jobs:
           charts_repo_url: https://adonispd.github.io/helm-chart-poc
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_OWNER: "${{ secrets.GITHUB_ACTOR }}"
+          CR_OWNER: "$GITHUB_ACTOR"
           CR_GIT_BASE_URL: https://api.github.com/
         
 
