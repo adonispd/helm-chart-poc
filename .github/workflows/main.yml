@@ -43,7 +43,7 @@ jobs:
         uses: helm/chart-releaser-action@v1.2.1
         with:
           charts_dir: charts
-          charts_repo_url: https://github.com/adonispd/helm-chart-poc
+          charts_repo_url: https://adonispd.github.io/helm-chart-poc
           config: cr-config.yaml
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"        
