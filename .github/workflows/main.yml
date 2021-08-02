@@ -25,6 +25,13 @@ jobs:
       # Checks-out your repositßory under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Configure Git
+        run: |
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       # ##############################################
       - name: Install Helm
@@ -36,11 +43,10 @@ jobs:
         uses: helm/chart-releaser-action@v1.2.1
         with:
           charts_dir: charts/
+          charts_repo_url: https://adonispd.github.io/helm-chart-poc
+          owner: "${{ secrets.GITHUB_ACTOR }}"
+          git-base-url: https://api.github.com/
         env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_PACKAGE_PATH: .deploy
-          CR_GIT_BASE_URL: "https://api.github.com/"
-          CR_GIT_UPLOAD_URL: "https://uploads.github.com/"
-          
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"        
         
 
