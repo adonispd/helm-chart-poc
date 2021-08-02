@@ -4,4 +4,3 @@ metadata:
   name: {{ include "myapp.fullname" . }}
 data:
   name: value
-  name2: value2
