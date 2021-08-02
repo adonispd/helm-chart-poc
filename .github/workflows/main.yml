@@ -35,18 +35,17 @@ jobs:
 
       # ##############################################
       - name: Install Helm
-        uses: azure/setup-helm@v1
+        uses: azure/setup-helm@v2
         with:
           version: v3.4.0
       # release Helm Chart
       - name: Helm Chart Releaser
         uses: helm/chart-releaser-action@v1.2.1
         with:
-          charts_dir: charts/
-          charts_repo_url: https://adonispd.github.io/helm-chart-poc
+          charts_dir: charts
+          charts_repo_url: https://the-watchmen.github.io/helm-charts
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          CR_OWNER: "$GITHUB_ACTOR"
           CR_GIT_BASE_URL: https://api.github.com/
         
 
